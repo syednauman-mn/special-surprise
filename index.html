@@ -1,0 +1,987 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="stars"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- SLIDE 01 -->
+        <section class="slide active" id="slide1">
+
+            <div class="top-bar">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    SYSTEM ONLINE
+                </div>
+                <div>ACCESS LEVEL: RESTRICTED</div>
+            </div>
+
+            <div class="main-card">
+
+                <div class="corner corner-one"></div>
+                <div class="corner corner-two"></div>
+                <div class="corner corner-three"></div>
+                <div class="corner corner-four"></div>
+
+                <!-- OPENING SCREEN -->
+                <div id="openingScreen">
+
+                    <div class="portal-icon">✦</div>
+
+                    <p class="eyebrow">CLASSIFIED ACCESS PORTAL</p>
+
+                    <h1>ATTENTION,<br><span>MY MADAM🩷!</span></h1>
+
+                    <p class="main-message">
+                        You've been summoned.
+                    </p>
+
+                    <p class="sub-message">
+                        An unusual situation requires your immediate attention.
+                        Further details remain classified.
+                    </p>
+
+                    <div class="warning-box">
+                        <span>CONFIDENTIAL NOTICE</span>
+                        <p>
+                            Proceed only if you are prepared for unexpected nonsense.
+                        </p>
+                    </div>
+
+                    <button class="gold-button" id="openButton">
+                        OPEN MY SURPRISE <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <!-- ENVELOPE SCREEN -->
+                <div id="envelopeScreen" class="hidden">
+
+                    <p class="eyebrow">A MESSAGE HAS ARRIVED</p>
+
+                    <h2>Something is waiting<br>for you.</h2>
+
+                    <p class="sub-message">
+                        But first, we need to make sure you're actually allowed in.
+                    </p>
+
+                    <div class="envelope-wrapper">
+                        <div class="envelope" id="envelope">
+                            <div class="envelope-back"></div>
+                            <div class="envelope-paper"></div>
+                            <div class="envelope-front"></div>
+                            <div class="envelope-flap"></div>
+                            <div class="envelope-heart">✦</div>
+                        </div>
+                    </div>
+
+                    <button class="gold-button" id="openEnvelopeButton">
+                        OPEN THE ENVELOPE <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <!-- VERIFICATION SCREEN -->
+                <div id="verificationScreen" class="hidden">
+
+                    <div class="portal-icon">⌘</div>
+
+                    <p class="eyebrow">SECURITY SCAN IN PROGRESS</p>
+
+                    <h2>Verifying<br><span>your identity.</span></h2>
+
+                    <p class="sub-message" id="systemMessage">
+                        Initialising security protocols...
+                    </p>
+
+                    <div class="progress-area">
+                        <div class="progress-info">
+                            <span>AUTHENTICATION</span>
+                            <span id="progressNumber">0%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <p class="stuck-message hidden" id="stuckMessage">
+                        Hmm... something isn't right here.
+                    </p>
+
+                </div>
+
+
+                <!-- FAILURE SCREEN -->
+                <div id="failureScreen" class="hidden">
+
+                    <div class="failure-icon">!</div>
+
+                    <p class="eyebrow">SYSTEM ERROR 009</p>
+
+                    <h2>VERIFICATION<br><span>FAILED!</span></h2>
+
+                    <p class="sub-message">
+                        Too much attitude detected.
+                    </p>
+
+                    <div class="warning-box">
+                        <span>FINAL SYSTEM DECISION</span>
+                        <p>
+                            We have decided to let you in. Don't make us regret it.
+                        </p>
+                    </div>
+
+                    <button class="gold-button" id="letMeInButton">
+                        FINE, LET ME IN! <span>→</span>
+                    </button>
+
+                </div>
+
+                <div class="card-footer">
+                    <span>SECURE CONNECTION</span>
+                    <span>EST. CLASSIFIED</span>
+                </div>
+
+            </div>
+
+            <p class="bottom-note">
+                PLEASE FOLLOW ALL INSTRUCTIONS. OR DON'T.
+            </p>
+
+        </section>
+
+
+        <!-- SLIDE 02 -->
+        <section class="slide" id="slide2">
+
+            <div class="top-bar">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    SECURITY DEPARTMENT
+                </div>
+                <div>LEVEL: 02</div>
+            </div>
+
+            <div class="main-card">
+
+                <div class="corner corner-one"></div>
+                <div class="corner corner-two"></div>
+                <div class="corner corner-three"></div>
+                <div class="corner corner-four"></div>
+
+                <div id="questionScreen">
+
+                    <div class="portal-icon">⌘</div>
+
+                    <p class="eyebrow">ADDITIONAL VERIFICATION REQUIRED</p>
+
+                    <h1>IDENTITY<br><span>CHECK.</span></h1>
+
+                    <p class="sub-message">
+                        Your previous behaviour has raised several concerns.
+                        We need to ask you a few questions.
+                    </p>
+
+                    <div class="question-card">
+
+                        <div class="question-top">
+                            <span>QUESTION 01 / 01</span>
+                            <span>MANDATORY</span>
+                        </div>
+
+                        <h2>Are you always this dramatic?</h2>
+
+                        <div class="answer-list">
+
+                            <button class="answer-button" data-answer="obvious">
+                                <span class="answer-letter">A</span>
+                                Obviously not.
+                            </button>
+
+                            <button class="answer-button" data-answer="depends">
+                                <span class="answer-letter">B</span>
+                                Depends on who's asking.
+                            </button>
+
+                            <button class="answer-button" data-answer="refuse">
+                                <span class="answer-letter">C</span>
+                                I refuse to answer.
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="answer-feedback hidden" id="answerFeedback">
+
+                        <div class="feedback-icon" id="feedbackIcon">🤨</div>
+
+                        <p class="eyebrow">SYSTEM RESPONSE</p>
+
+                        <h3 id="feedbackTitle">INTERESTING ANSWER.</h3>
+
+                        <p id="feedbackText"></p>
+
+                    </div>
+
+                    <div class="final-verdict hidden" id="finalVerdict">
+
+                        <div class="verdict-symbol">⚠</div>
+
+                        <p class="eyebrow">OFFICIAL SYSTEM VERDICT</p>
+
+                        <h2>SUSPICIOUS HUMAN DETECTED.</h2>
+
+                        <p>
+                            Identity confirmed. Common sense not found.
+                            We have decided to let you continue anyway.
+                        </p>
+
+                        <button class="gold-button" id="continueToSlide3">
+                            WHAT NOW? <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <span>ALL ANSWERS ARE RECORDED</span>
+                    <span>NO APPEALS ACCEPTED</span>
+                </div>
+
+            </div>
+
+            <p class="bottom-note">
+                YOU'RE MAKING THIS MORE DIFFICULT THAN NECESSARY.
+            </p>
+
+        </section>
+
+<!-- SLIDE 03 - THE NAUGHTY BUTTON -->
+<section class="slide" id="slide3">
+
+    <div class="top-bar">
+        <div class="status">
+            <span class="status-dot"></span>
+            INTERACTION DEPARTMENT
+        </div>
+        <div>LEVEL: 03</div>
+    </div>
+
+    <div class="main-card">
+
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <div class="portal-icon">✦</div>
+
+        <p class="eyebrow">ONE LAST SIMPLE TASK</p>
+
+        <h1>JUST CLICK<br><span>THE BUTTON.</span></h1>
+
+        <p class="sub-message" id="naughtyMessage">
+            This is easy. Even you can do it.
+            Just click the button below.
+        </p>
+
+        <div class="button-playground" id="buttonPlayground">
+
+            <div class="playground-label">
+                TARGET AREA — PLEASE COOPERATE
+            </div>
+
+            <button class="escape-button" id="escapeButton">
+                CLICK ME!
+            </button>
+
+        </div>
+
+        <div class="naughty-status" id="naughtyStatus">
+            SYSTEM STATUS: WAITING FOR YOUR COOPERATION
+        </div>
+
+        <div class="naughty-unlocked hidden" id="naughtyUnlocked">
+
+            <div class="portal-icon">✓</div>
+
+            <p class="eyebrow">TASK COMPLETED</p>
+
+            <h2>FINALLY. YOU DID IT.</h2>
+
+            <p class="sub-message">
+                That took longer than expected.
+                We're genuinely impressed by your patience.
+            </p>
+
+            <button class="gold-button" id="continueToSlide4">
+                I'M DONE WITH THIS <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="card-footer">
+            <span>BUTTON CONTROL: UNSTABLE</span>
+            <span>GOOD LUCK.</span>
+        </div>
+
+    </div>
+
+    <p class="bottom-note">
+        PLEASE REMAIN CALM. THE BUTTON IS NOT COOPERATING.
+    </p>
+
+</section>
+
+        <!-- SLIDE 04 -->
+        <section class="slide" id="slide4">
+
+            <div class="top-bar">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    PERSONALITY ANALYSIS UNIT
+                </div>
+                <div>LEVEL: 04</div>
+            </div>
+
+            <div class="main-card">
+
+                <div class="corner corner-one"></div>
+                <div class="corner corner-two"></div>
+                <div class="corner corner-three"></div>
+                <div class="corner corner-four"></div>
+
+                <div id="testScreen">
+
+                    <div class="portal-icon">♧</div>
+
+                    <p class="eyebrow">OFFICIAL PERSONALITY ASSESSMENT</p>
+
+                    <h1>LET'S TEST<br><span>YOUR PATIENCE.</span></h1>
+
+                    <p class="sub-message">
+                        Answer honestly. Although, we're not sure honesty
+                        is one of your strongest qualities.
+                    </p>
+
+                    <div class="test-progress">
+                        <span id="testQuestionNumber">QUESTION 01 / 03</span>
+                        <span>HIGHLY SCIENTIFIC</span>
+                    </div>
+
+                    <div class="test-question-card">
+                        <h2 id="testQuestion">
+                            Someone disagrees with you. What do you do?
+                        </h2>
+
+                        <div class="test-options" id="testOptions">
+
+                            <button class="test-option" data-choice="0">
+                                A little debate never hurt anyone.
+                            </button>
+
+                            <button class="test-option" data-choice="1">
+                                Explain why I'm obviously right.
+                            </button>
+
+                            <button class="test-option" data-choice="2">
+                                I was right. Next question.
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <p class="test-feedback hidden" id="testFeedback"></p>
+
+                    <div class="personality-report hidden" id="personalityReport">
+
+                        <div class="report-stamp">OFFICIAL REPORT</div>
+
+                        <p class="eyebrow">THE RESULTS ARE IN</p>
+
+                        <h2>PERSONALITY TYPE:</h2>
+
+                        <h3>PROFESSIONAL<br><span>MENACE.</span></h3>
+
+                        <p>
+                            Extremely confident. Selectively innocent.
+                            Has a reply for everything and somehow always
+                            gets the last word.
+                        </p>
+
+                        <div class="report-rating">
+                            <span>LEVEL OF DRAMA</span>
+                            <strong>OVER THE LIMIT</strong>
+                        </div>
+
+                        <div class="report-rating">
+                            <span>ATTITUDE CONTROL</span>
+                            <strong>NOT FOUND</strong>
+                        </div>
+
+                        <div class="report-rating">
+                            <span>CHANCE OF CHANGING</span>
+                            <strong>ABSOLUTELY ZERO</strong>
+                        </div>
+
+                        <button class="gold-button" id="continueToSlide5">
+                            SHOW ME THE NEXT PROBLEM <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <span>RESULTS: PRE-DECIDED</span>
+                    <span>APPEALS: DENIED</span>
+                </div>
+
+            </div>
+
+            <p class="bottom-note">
+                PLEASE DON'T ARGUE WITH THE RESULTS.
+            </p>
+
+        </section>
+
+<!-- SLIDE 05 - THE COMPLAINT DEPARTMENT -->
+<section class="slide" id="slide5">
+
+    <div class="top-bar">
+        <div class="status">
+            <span class="status-dot"></span>
+            COMPLAINT DEPARTMENT
+        </div>
+        <div>LEVEL: 05</div>
+    </div>
+
+    <div class="main-card">
+
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <div id="complaintScreen">
+
+            <div class="portal-icon">⚖</div>
+
+            <p class="eyebrow">OFFICIAL NOTICE OF COMPLAINT</p>
+
+            <h1>YOU'VE BEEN<br><span>REPORTED.</span></h1>
+
+            <p class="sub-message">
+                After a very serious investigation, the department
+                has received the following complaints about you.
+            </p>
+
+            <div class="complaint-list">
+
+                <div class="complaint-item">
+                    <span class="complaint-number">01</span>
+                    <div>
+                        <h3>EXCESSIVE ATTITUDE</h3>
+                        <p>Displaying unnecessary confidence in every situation.</p>
+                    </div>
+                    <span class="complaint-status">GUILTY</span>
+                </div>
+
+                <div class="complaint-item">
+                    <span class="complaint-number">02</span>
+                    <div>
+                        <h3>TOO MANY OPINIONS</h3>
+                        <p>Having a reply ready even when nobody asked.</p>
+                    </div>
+                    <span class="complaint-status">GUILTY</span>
+                </div>
+
+                <div class="complaint-item">
+                    <span class="complaint-number">03</span>
+                    <div>
+                        <h3>UNNECESSARY CUTENESS</h3>
+                        <p>Being adorable and pretending not to know it.</p>
+                    </div>
+                    <span class="complaint-status">GUILTY</span>
+                </div>
+
+                <div class="complaint-item">
+                    <span class="complaint-number">04</span>
+                    <div>
+                        <h3>CAUSING DISTRACTIONS</h3>
+                        <p>Making people smile at their phones for no reason.</p>
+                    </div>
+                    <span class="complaint-status">GUILTY</span>
+                </div>
+
+            </div>
+
+            <p class="complaint-warning">
+                YOU HAVE THE RIGHT TO APPEAL. WE HAVE THE RIGHT TO IGNORE IT.
+            </p>
+
+            <button class="gold-button" id="appealButton">
+                I WANT TO APPEAL <span>→</span>
+            </button>
+
+        </div>
+
+        <!-- APPEAL REJECTION -->
+
+        <div class="appeal-rejected hidden" id="appealRejected">
+
+            <div class="failure-icon">✕</div>
+
+            <p class="eyebrow">APPEAL STATUS: REJECTED</p>
+
+            <h2>WE HAVE REVIEWED<br><span>YOUR APPEAL.</span></h2>
+
+            <p class="sub-message">
+                And after approximately zero seconds of consideration,
+                we have decided that you're still guilty.
+            </p>
+
+            <div class="rejection-box">
+                <div class="rejection-row">
+                    <span>YOUR EXCUSE</span>
+                    <strong>NOT ACCEPTED</strong>
+                </div>
+
+                <div class="rejection-row">
+                    <span>REFUND REQUEST</span>
+                    <strong>DENIED</strong>
+                </div>
+
+                <div class="rejection-row">
+                    <span>CHANCE OF WINNING</span>
+                    <strong>ZERO</strong>
+                </div>
+            </div>
+
+            <h3 class="case-closed">CASE CLOSED. GOOD DAY, MY MADAM. 😂</h3>
+
+            <button class="gold-button" id="continueToSlide6">
+                FINALLY, NEXT <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="card-footer">
+            <span>DEPARTMENT OF UNNECESSARY DRAMA</span>
+            <span>NO REFUNDS</span>
+        </div>
+
+    </div>
+
+    <p class="bottom-note">
+        ALL COMPLAINTS ARE 100% UNFAIR AND 100% ACCURATE.
+    </p>
+
+</section>
+
+<!-- SLIDE 06 - THE SECRET MISSION -->
+<section class="slide" id="slide6">
+
+    <div class="top-bar">
+        <div class="status">
+            <span class="status-dot"></span>
+            SECRET OPERATIONS
+        </div>
+        <div>LEVEL: 06</div>
+    </div>
+
+    <div class="main-card">
+
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <div id="secretMissionScreen">
+
+            <div class="portal-icon">✦</div>
+
+            <p class="eyebrow">CONFIDENTIAL SIDE QUEST</p>
+
+            <h1>FIND THE<br><span>HIDDEN STARS.</span></h1>
+
+            <p class="sub-message">
+                Three stars have been hidden somewhere in this area.
+                Find every one of them to unlock the next file.
+                And no, we're not giving you hints. 😌
+            </p>
+
+            <div class="star-progress">
+                <span id="starCount">STARS FOUND: 0 / 3</span>
+                <span>CLASSIFIED SEARCH</span>
+            </div>
+
+            <div class="star-hunt-area" id="starHuntArea">
+
+                <span class="hunt-decoration decoration-one">✧</span>
+                <span class="hunt-decoration decoration-two">·</span>
+                <span class="hunt-decoration decoration-three">✧</span>
+                <span class="hunt-decoration decoration-four">·</span>
+
+                <button class="hidden-star star-one" data-star="0" aria-label="Find hidden star one">★</button>
+                <button class="hidden-star star-two" data-star="1" aria-label="Find hidden star two">★</button>
+                <button class="hidden-star star-three" data-star="2" aria-label="Find hidden star three">★</button>
+
+                <p class="hunt-hint">LOOK CAREFULLY. THEY'RE HIDING IN PLAIN SIGHT.</p>
+
+            </div>
+
+            <div class="star-message hidden" id="starMessage">
+                <span class="star-message-icon" id="starMessageIcon">⭐</span>
+                <p class="eyebrow">SECRET MESSAGE FOUND</p>
+                <h3 id="starMessageTitle">WELL, WELL...</h3>
+                <p id="starMessageText"></p>
+            </div>
+
+            <div class="secret-unlocked hidden" id="secretUnlocked">
+
+                <div class="portal-icon">✉</div>
+
+                <p class="eyebrow">ALL OBJECTIVES COMPLETED</p>
+
+                <h2>YOU FOUND THEM ALL.</h2>
+
+                <p class="sub-message">
+                    Your detective skills are surprisingly acceptable.
+                    A secret file has now been unlocked.
+                </p>
+
+                <button class="gold-button" id="openSecretFile">
+                    OPEN SECRET FILE <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            <span>MISSION STATUS: CLASSIFIED</span>
+            <span>KEEP SEARCHING</span>
+        </div>
+
+    </div>
+
+    <p class="bottom-note">
+        THE STARS ARE NOT GOING TO FIND THEMSELVES.
+    </p>
+
+</section>
+
+<!-- SLIDE 07 - THE FINAL WARNING -->
+<section class="slide" id="slide7">
+
+    <div class="top-bar">
+        <div class="status">
+            <span class="status-dot"></span>
+            FINAL SECURITY NOTICE
+        </div>
+        <div>LEVEL: 07</div>
+    </div>
+
+    <div class="main-card">
+
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <div id="finalWarningScreen">
+
+            <div class="warning-emblem">!</div>
+
+            <p class="eyebrow">IMPORTANT SYSTEM ANNOUNCEMENT</p>
+
+            <h1>THIS IS<br><span>THE END.</span></h1>
+
+            <p class="sub-message">
+                You have completed every task.
+                There are no more surprises, no hidden messages,
+                and absolutely nothing suspicious happening here.
+            </p>
+
+            <div class="final-notice">
+                <span>PLEASE READ CAREFULLY</span>
+                <p>
+                    Do not question this message.
+                    Do not investigate further.
+                    Simply accept that everything is perfectly normal.
+                </p>
+            </div>
+
+            <p class="trust-question">
+                DO YOU TRUST THIS WEBSITE?
+            </p>
+
+            <button class="gold-button" id="trustButton">
+                YES, COMPLETELY <span>→</span>
+            </button>
+
+            <button class="distrust-button" id="distrustButton">
+                I DON'T TRUST YOU.
+            </button>
+
+        </div>
+
+        <div class="trust-response hidden" id="trustResponse">
+
+            <div class="portal-icon">🤨</div>
+
+            <p class="eyebrow">RESPONSE RECEIVED</p>
+
+            <h2 id="trustResponseTitle">INTERESTING CHOICE.</h2>
+
+            <p class="sub-message" id="trustResponseText"></p>
+
+            <div class="final-notice">
+                <span>ONE LAST THING</span>
+                <p>
+                    The system has detected that you are asking
+                    too many questions. Please proceed.
+                </p>
+            </div>
+
+            <button class="gold-button" id="continueToSlide8">
+                WHAT ARE YOU HIDING? <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="card-footer">
+            <span>FINAL NOTICE: ISSUED</span>
+            <span>NOTHING TO SEE HERE</span>
+        </div>
+
+    </div>
+
+    <p class="bottom-note">
+        THIS IS DEFINITELY NOT A DISTRACTION.
+    </p>
+
+</section>
+
+<!-- SLIDE 08 - THE UNEXPECTED SILENCE -->
+<section class="slide" id="slide8">
+
+    <div class="top-bar soft-top-bar">
+        <div class="status">
+            <span class="status-dot"></span>
+            PRIVATE MESSAGE
+        </div>
+        <div>LEVEL: 08</div>
+    </div>
+
+    <div class="main-card soft-card">
+
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <div id="silenceScreen">
+
+            <div class="soft-icon">♡</div>
+
+            <p class="eyebrow soft-eyebrow">A MOMENT OF HONESTY</p>
+
+            <h1 class="soft-heading">
+                OKAY...<br><span>JOKES ASIDE.</span>
+            </h1>
+
+            <p class="soft-message">
+                I know this whole thing has been ridiculous.
+                And yes, annoying you was absolutely part of the plan.
+            </p>
+
+            <p class="soft-message">
+                But there's something I actually wanted to tell you.
+                Something that deserves a little more than another silly button.
+            </p>
+
+            <div class="quiet-divider">
+                <span>✦</span>
+            </div>
+
+            <p class="soft-final-line">
+                So, for once... just hear me out.
+            </p>
+
+            <button class="soft-button" id="openHeartMessage">
+                OPEN MY MESSAGE <span>♡</span>
+            </button>
+
+        </div>
+
+        <div class="heart-message hidden" id="heartMessage">
+
+            <div class="soft-icon">♡</div>
+
+            <p class="eyebrow soft-eyebrow">SOMETHING I MEAN</p>
+
+            <h2>NO MORE TRICKS.</h2>
+
+            <p class="soft-message">
+                Behind all those silly challenges, fake warnings,
+                and unnecessary drama, there was always one thing
+                I wanted to make sure of...
+            </p>
+
+            <p class="soft-message">
+                That this little surprise would make you smile.
+                You deserve a day filled with happiness,
+                laughter, and all the good things life can bring.
+            </p>
+
+            <div class="quiet-divider">
+                <span>♡</span>
+            </div>
+
+            <p class="soft-final-line">
+                And now... there's just one last thing waiting for you.
+            </p>
+
+            <button class="soft-button" id="continueToSlide9">
+                ONE LAST THING <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="card-footer soft-footer">
+            <span>NO MORE SECURITY CHECKS</span>
+            <span>JUST A LITTLE HONESTY</span>
+        </div>
+
+    </div>
+
+    <p class="bottom-note soft-bottom-note">
+        THANK YOU FOR MAKING IT THIS FAR.
+    </p>
+
+</section>
+
+
+<!-- ==================================
+     SLIDE 09 - THE CASE IS CLOSED
+================================== -->
+
+<section class="slide" id="slide9">
+
+    <div class="ending-container">
+
+        <!-- STAGE 1: FINAL REPORT -->
+
+        <div id="finalReport">
+
+            <p class="ending-label">INVESTIGATION REPORT #009</p>
+
+            <div class="ending-icon">📁</div>
+
+            <h1>THE CASE<br>IS CLOSED.</h1>
+
+            <p class="ending-description">
+                Congratulations. You have successfully wasted
+                your time completing a completely unnecessary
+                investigation.
+            </p>
+
+            <div class="report-stamp">OFFICIALLY USELESS</div>
+
+            <button id="openFinalFile" class="ending-button">
+                WAIT... WHAT'S THIS?
+            </button>
+
+        </div>
+
+
+        <!-- STAGE 2: SECRET FILE -->
+
+        <div id="secretFile" class="hidden">
+
+            <p class="ending-label">UNAUTHORIZED FILE DETECTED</p>
+
+            <div class="ending-icon">🔒</div>
+
+            <h1>ONE LAST<br>THING...</h1>
+
+            <p class="ending-description">
+                There is something we forgot to tell you.
+                And no, you cannot file a complaint about it.
+            </p>
+
+            <button id="revealFinalMessage" class="ending-button">
+                OPEN FINAL FILE
+            </button>
+
+        </div>
+
+
+        <!-- STAGE 3: FINAL MESSAGE -->
+
+        <div id="actualFinalMessage" class="hidden">
+
+            <p class="ending-label">CONFIDENTIAL MESSAGE</p>
+
+            <div class="ending-icon">✨</div>
+
+            <h1>THE REAL<br>REASON.</h1>
+
+            <p class="ending-description">
+                You thought this entire website was designed
+                to annoy you.
+
+                Well... you weren't entirely wrong.
+
+                But sometimes, making someone smile is reason
+                enough to create something ridiculous.
+            </p>
+
+            <div class="ending-divider"></div>
+
+            <h2>INVESTIGATION TERMINATED.</h2>
+
+            <p class="ending-last-line">
+                Your complaints will be ignored as usual. 😂 You are forgiven for everything🫀  
+            </p>
+
+            <p class="ending-last-line">
+               "MERI JAAN MULAIKA NAYAZ🫀"
+            </p>
+
+            <p class="ending-signature">
+                — THE VERY SUSPICIOUS ADMIN
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- IMPORTANT: KEEP THIS AT THE BOTTOM -->
+    <script src="script.js"></script>
+
+</body>
+</html>
